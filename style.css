@@ -482,7 +482,7 @@ body {
 /* Projects Section */
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
 }
 
@@ -568,6 +568,7 @@ body {
     line-height: 1.5;
     display: -webkit-box;
     -webkit-line-clamp: 2;
+    line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -791,6 +792,7 @@ footer {
         padding: 2rem 0;
         transform: translateY(-150%);
         transition: transform 0.4s ease;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
     }
 
     .nav-links.active {
@@ -799,6 +801,7 @@ footer {
 
     .hamburger {
         display: block;
+        z-index: 101;
     }
 
     .hamburger.active .bar:nth-child(2) {
@@ -814,34 +817,75 @@ footer {
     }
 
     .hero {
-        flex-direction: column;
+        flex-direction: column-reverse;
         justify-content: center;
-        text-align: center;
         gap: 3rem;
+        padding-top: 80px;
+        text-align: center;
+        height: min-content;
+        min-height: 100vh;
+        padding-bottom: 4rem;
+    }
+
+    .hero-content {
+        width: 100%;
     }
 
     .hero h1 {
         font-size: 3rem;
     }
 
-    .cube-wrapper {
-        width: 150px;
-        height: 150px;
-    }
-
-    .face {
-        width: 150px;
-        height: 150px;
+    .hero-btns {
+        justify-content: center;
     }
 
     .about-grid {
         grid-template-columns: 1fr;
     }
 
-    .hero-btns {
+    .modal-content {
+        width: 95%;
+        height: 90vh;
+        max-height: 90vh;
+        margin: 5vh auto;
+    }
+
+    .modal-image-container {
+        max-height: 30vh;
+    }
+
+    .modal-info {
+        padding: 1.5rem;
+    }
+
+    .modal-info h2 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .project-card {
+        height: 350px;
+    }
+
+    .modal-links {
+        flex-direction: column;
+    }
+
+    .modal-links a {
+        text-align: center;
         justify-content: center;
     }
 }
+
 .click-hint {
     display: block;
     margin-top: 1rem;
@@ -852,7 +896,8 @@ footer {
     transition: all 0.3s ease;
     text-align: right;
     font-weight: 500;
-    pointer-events: none; /* Let clicks pass through to card */
+    pointer-events: none;
+    /* Let clicks pass through to card */
 }
 
 .project-card:hover .click-hint {
