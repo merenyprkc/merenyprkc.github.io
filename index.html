@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Muhammed Eren Yaprakcı - Game Developer">
+    <title>Muhammed Eren Yaprakcı | Game Developer</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&family=Rajdhani:wght@500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="cursor-dot" data-cursor-dot></div>
+    <div class="cursor-outline" data-cursor-outline></div>
+
+    <nav class="navbar">
+        <div class="logo">MEY<span class="accent">.</span></div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+
+    <header id="home" class="hero">
+        <div class="hero-content">
+            <span class="subtitle">Hello, I'm</span>
+            <h1>Muhammed Eren <br><span class="highlight">Yaprakcı</span></h1>
+            <h2 class="role glitch" data-text="Game Developer">Game Developer</h2>
+            <p class="description">I'm developing games with Unity.</p>
+            <div class="hero-btns">
+                <a href="#projects" class="btn primary-btn">Projects <i class="fas fa-gamepad"></i></a>
+                <a href="#contact" class="btn secondary-btn">Contact <i class="fas fa-paper-plane"></i></a>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <!-- decorative abstract geometric shape or 3d element placeholder -->
+            <div class="cube-wrapper">
+                <div class="cube">
+                    <div class="face front"></div>
+                    <div class="face back"></div>
+                    <div class="face right"></div>
+                    <div class="face left"></div>
+                    <div class="face top"></div>
+                    <div class="face bottom"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p>Hello! I am Muhammed Eren Yaprakcı, a passionate <strong>Game Developer</strong></p>
+                    <p>I constantly improve myself in game mechanics, level design, and user experience. I create
+                        projects by combining both technical and artistic perspectives.</p>
+
+                    <div class="skills">
+                        <h3>Skills</h3>
+                        <div class="skill-tags">
+                            <span>Unity 3D/2D</span>
+                            <span>C#</span>
+                            <span>Game Mechanics</span>
+                            <span>UI/UX Design</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-card">
+                        <i class="fas fa-code"></i>
+                        <h3>Unity</h3>
+                        <p>Advanced</p>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-layer-group"></i>
+                        <h3>Level Design</h3>
+                        <p>Prototyping</p>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-lightbulb"></i>
+                        <h3>Creative</h3>
+                        <p>Solutions</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="section-title">Projects</h2>
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <article class="project-card">
+                    <div class="project-image">
+                        <div class="placeholder-img">Project 1 Image</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Mystery Maze</h3>
+                        <p class="project-desc">A puzzle-focused platformer game developed using Unity.</p>
+                        <div class="tags">
+                            <span>Unity</span>
+                            <span>C#</span>
+                            <span>Puzzle</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" target="_blank"><i class="fab fa-github"></i> Code</a>
+                            <a href="#" target="_blank"><i class="fas fa-play"></i> Play</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 2 -->
+                <article class="project-card">
+                    <div class="project-image">
+                        <div class="placeholder-img">Project 2 Image</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Space Shooter</h3>
+                        <p class="project-desc">Classic arcade-style space shooter with procedural level structure.
+                        </p>
+                        <div class="tags">
+                            <span>Unity 2D</span>
+                            <span>Action</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" target="_blank"><i class="fab fa-github"></i> Code</a>
+                            <a href="#" target="_blank"><i class="fas fa-play"></i> Play</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 3 -->
+                <article class="project-card">
+                    <div class="project-image">
+                        <div class="placeholder-img">Project 3 Image</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>RPG Prototype</h3>
+                        <p class="project-desc">RPG prototype featuring inventory system and dialogue mechanics.</p>
+                        <div class="tags">
+                            <span>Unity</span>
+                            <span>System Design</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" target="_blank"><i class="fab fa-github"></i> Code</a>
+                            <a href="#" target="_blank"><i class="fas fa-play"></i> Play</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title">Contact</h2>
+            <div class="contact-wrapper">
+                <p class="contact-text">Feel free to contact me for your projects.</p>
+                <div class="social-links">
+                    <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-itch-io"></i></a>
+                    <a href="mailto:email@example.com" class="social-icon"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Muhammed Eren Yaprakcı. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
