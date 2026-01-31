@@ -559,6 +559,32 @@ body {
     margin-bottom: 0.5rem;
     color: #fff;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.status-badge {
+    font-size: 0.8rem;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-family: var(--font-main);
+    font-weight: 500;
+    letter-spacing: normal;
+    white-space: nowrap;
+}
+
+.status-badge.dev {
+    background: rgba(255, 166, 0, 0.15);
+    color: #ffae00;
+    border: 1px solid rgba(255, 166, 0, 0.3);
+}
+
+.status-badge.unfinished {
+    background: rgba(255, 0, 85, 0.15);
+    color: #ff3366;
+    border: 1px solid rgba(255, 0, 85, 0.3);
 }
 
 .project-desc {
