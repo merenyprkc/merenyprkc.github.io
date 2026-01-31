@@ -763,12 +763,6 @@ dialog::backdrop {
     text-align: center;
 }
 
-.contact-text {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
-    color: var(--text-muted);
-}
-
 .social-links {
     display: flex;
     justify-content: center;
