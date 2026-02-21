@@ -17,6 +17,37 @@ document.addEventListener('DOMContentLoaded', () => {
         }, { duration: 500, fill: 'forwards' });
     });
 
+    // Language Switcher
+    const langBtns = document.querySelectorAll('.lang-btn');
+    const i18nElements = document.querySelectorAll('[data-i18n]');
+
+    langBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            langBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            const lang = btn.id === 'lang-tr' ? 'tr' : 'en';
+
+            i18nElements.forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (translations[lang] && translations[lang][key]) {
+                    el.innerHTML = translations[lang][key];
+                    if (el.hasAttribute('data-text')) {
+                        // For glitch effect elements, extract only text if there's HTML
+                        // But since hero-role has no HTML, straight assignment is fine
+                        el.setAttribute('data-text', translations[lang][key]);
+                    }
+                }
+            });
+        });
+    });
+
+    // Set initial language to match EN translations perfectly on load
+    const defaultLangBtn = document.getElementById('lang-en');
+    if (defaultLangBtn) {
+        defaultLangBtn.click();
+    }
+
     // Mobile Navigation
     const hamburger = document.querySelector('.hamburger');
     const navLinks = document.querySelector('.nav-links');
