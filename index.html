@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Muhammed Eren Yaprakcı - Game Developer">
-    <title>Muhammed Eren Yaprakcı | Game Developer</title>
+    <meta name="description" content="Muhammed Eren Yaprakcı - Software Engineering Student">
+    <title>Muhammed Eren Yaprakcı | Software Engineering Student</title>
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-4MBBXLKGKZ"></script>
     <script>
@@ -27,8 +27,6 @@
 </head>
 
 <body>
-    <div class="cursor-dot" data-cursor-dot></div>
-    <div class="cursor-outline" data-cursor-outline></div>
 
     <nav class="navbar">
         <div class="logo">MEREN<span class="accent">YPRKC</span></div>
@@ -96,6 +94,7 @@
                             <span>Unity 3D/2D</span>
                             <span data-i18n="skill-gm">Game Mechanics</span>
                             <span data-i18n="skill-ui">UI/UX Design</span>
+                            <span data-i18n="skill-web">Web Development</span>
                             <span>C#</span>
                             <span>Python</span>
                             <span>Java</span>
@@ -109,109 +108,153 @@
     <section id="projects" class="section">
         <div class="container">
             <h2 class="section-title" data-i18n="projects-title">Projects</h2>
-            <div class="projects-grid">
-                <!-- Project 1 -->
-                <article class="project-card">
-                    <div class="project-image">
-                        <div class="placeholder-img"><img src="images/survival-game.png"></div>
-                    </div>
-                    <div class="project-content">
-                        <h3>Survival Project</h3>
-                        <p class="project-desc" data-i18n="proj1-desc">A 3D survival game project.</p>
-                        <div class="tags">
-                            <span>Unity</span>
-                            <span>C#</span>
-                            <span>3D</span>
-                            <span data-i18n="tag-surv">Survival</span>
-                            <span class="status-badge unfinished" data-i18n="tag-unfin">Unfinished</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/Eferene/survival-game" target="_blank" data-i18n="link-code"><i
-                                    class="fab fa-github"></i> Code</a>
-                            <!-- <a href="#" target="_blank"><i class="fas fa-play"></i> Play</a> -->
-                        </div>
-                        <span class="click-hint" data-i18n="click-hint"><i class="fas fa-info-circle"></i> Click for
-                            details</span>
-                        <div class="project-details" style="display: none;">
-                            <h3 data-i18n="proj1-about-title">About Project</h3>
-                            <p data-i18n="proj1-about">Survival Project is a 3D survival project developed in Unity game
-                                engine.
-                                The project was shelved due to some reasons.
-                            </p>
-                            <br>
-                            <h3 data-i18n="proj1-did-title">What I Did?</h3>
-                            <ul>
-                                <li data-i18n="proj1-li1"><strong>Inventory System:</strong> Slot-based inventory system
-                                    designed.</li>
-                                <li data-i18n="proj1-li2"><strong>Item System:</strong> Item system, the foundation of a
-                                    survival game,
-                                    designed.</li>
-                                <li data-i18n="proj1-li3"><strong>Crafting System:</strong> System to produce new items
-                                    from collected items
-                                    designed.</li>
-                                <li data-i18n="proj1-li4"><strong>Building System (Unfinished):</strong> Basic building
-                                    mechanics added.</li>
-                                <li data-i18n="proj1-li5"><strong>Survival Mechanics:</strong> Hunger, thirst, and
-                                    fatigue mechanics added.
-                                    Includes consuming items.</li>
-                                <li data-i18n="proj1-li6"><strong>3D Models:</strong> 3D models designed for the game.
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </article>
+            
+            <div class="carousel-wrapper">
+                <button class="carousel-arrow left-arrow"><i class="fas fa-arrow-left"></i></button>
+                <button class="carousel-arrow right-arrow"><i class="fas fa-arrow-right"></i></button>
 
-                <!-- Project 2 -->
-                <article class="project-card">
-                    <div class="project-image">
-                        <div class="placeholder-img"><img src="images/soul-claim.webp"></div>
-                    </div>
-                    <div class="project-content">
-                        <h3>Soul Claim: Survivors</h3>
-                        <p class="project-desc" data-i18n="proj2-desc">A 2D action game project in Bullet-heaven genre.
-                        </p>
-                        <div class="tags">
-                            <span>Unity</span>
-                            <span>C#</span>
-                            <span>2D</span>
-                            <span>Action</span>
-                            <span>Bullet-Heaven</span>
-                            <span class="status-badge dev" data-i18n="tag-dev">In Development</span>
+                <div class="projects-carousel">
+                    <!-- Project 1: Treeban -->
+                    <article class="project-card">
+                        <div class="project-image">
+                            <div class="placeholder-img"><img src="images/treeban.webp"></div>
                         </div>
-                        <div class="project-links">
-                            <a href="https://github.com/Eferene/Soul-Claim-Survivors" target="_blank"
-                                data-i18n="link-code"><i class="fab fa-github"></i> Code</a>
-                            <!-- <a href="#" target="_blank"><i class="fas fa-play"></i> Play</a> -->
+                        <div class="project-content">
+                            <h3>Treeban</h3>
+                            <p class="project-desc" data-i18n="proj3-desc">A minimalist task manager with task dependencies and real-time collaboration.</p>
+                            <div class="tags">
+                                <span>Web</span>
+                                <span>Node.js</span>
+                                <span>Socket.io</span>
+                                <span data-i18n="tag-fullstack">Full Stack</span>
+                                <span data-i18n="tag-collab">Collaboration</span>
+                                <span class="status-badge" style="background: rgba(0, 255, 157, 0.15); color: var(--accent-color); border: 1px solid rgba(0, 255, 157, 0.3);" data-i18n="tag-released">Released</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://treeban.vercel.app" target="_blank" data-i18n="link-website"><i class="fas fa-globe"></i> Website</a>
+                            </div>
+                            <span class="click-hint" data-i18n="click-hint"><i class="fas fa-info-circle"></i> Click for details</span>
+                            <div class="project-details" style="display: none;">
+                                <h3 data-i18n="proj3-about-title">Project Details</h3>
+                                <p data-i18n="proj3-about">Treeban is a minimalist task manager that allows you to create dependencies between tasks and offers real-time collaboration. The project aims to provide a more focused workflow by locking tasks until their prerequisites are completed.</p>
+                                <br>
+                                <h3 data-i18n="proj3-did-title">Features</h3>
+                                <ul>
+                                    <li data-i18n="proj3-li1"><strong>Kanban Board:</strong> To Do / In Progress / Done columns.</li>
+                                    <li data-i18n="proj3-li2"><strong>Tree View:</strong> Dependency tree; a task remains locked until its prerequisite is completed.</li>
+                                    <li data-i18n="proj3-li3"><strong>User Accounts & Sharing:</strong> Registration, login, public profile page, and list sharing with permissions.</li>
+                                    <li data-i18n="proj3-li4"><strong>Real-Time:</strong> Instant synchronization with Socket.io.</li>
+                                    <li data-i18n="proj3-li5"><strong>Security:</strong> Secure authentication with hashing and JWTs.</li>
+                                </ul>
+                            </div>
                         </div>
-                        <span class="click-hint" data-i18n="click-hint"><i class="fas fa-info-circle"></i> Click for
-                            details</span>
-                        <div class="project-details" style="display: none;">
-                            <h3 data-i18n="proj2-about-title">Game Objective</h3>
-                            <p data-i18n="proj2-about">Soul Claim: Survivors is a fast-paced 2D action game with
-                                roguelite elements.
-                                The player tries to survive against incoming enemies while leveling up, buying new
-                                abilities, and getting stronger.</p>
-                            <br>
-                            <h3 data-i18n="proj2-did-title">What I Did?</h3>
-                            <ul>
-                                <li data-i18n="proj2-li1"><strong>Enemy System:</strong> Enemies designed, designed for
-                                    multiple attack types.
-                                </li>
-                                <li data-i18n="proj2-li2"><strong>Shop System:</strong> Multiple shops designed where
-                                    the player can buy
-                                    things at the end of the round.</li>
-                                <li data-i18n="proj2-li3"><strong>Wave System:</strong> Timed wave/round system
-                                    designed. Ensured enemies
-                                    spawn correctly and waves are designed as desired.</li>
-                                <li data-i18n="proj2-li4"><strong>EXP, Token and Coin System:</strong> EXP, Token, and
-                                    Coin system obtainable
-                                    from enemies designed.</li>
-                                <li data-i18n="proj2-li5"><strong>UI Mechanics:</strong> UI mechanics and design
-                                    implemented.</li>
-                            </ul>
+                    </article>
+
+                    <!-- Project 2: Soul Claim -->
+                    <article class="project-card">
+                        <div class="project-image">
+                            <div class="placeholder-img"><img src="images/soul-claim.webp"></div>
                         </div>
-                    </div>
-                </article>
+                        <div class="project-content">
+                            <h3>Soul Claim: Survivors</h3>
+                            <p class="project-desc" data-i18n="proj2-desc">A 2D action game project in Bullet-heaven genre.
+                            </p>
+                            <div class="tags">
+                                <span>Unity</span>
+                                <span>C#</span>
+                                <span>2D</span>
+                                <span>Action</span>
+                                <span>Bullet-Heaven</span>
+                                <span class="status-badge dev" data-i18n="tag-dev">In Development</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/Eferene/Soul-Claim-Survivors" target="_blank"
+                                    data-i18n="link-code"><i class="fab fa-github"></i> Code</a>
+                            </div>
+                            <span class="click-hint" data-i18n="click-hint"><i class="fas fa-info-circle"></i> Click for
+                                details</span>
+                            <div class="project-details" style="display: none;">
+                                <h3 data-i18n="proj2-about-title">Game Objective</h3>
+                                <p data-i18n="proj2-about">Soul Claim: Survivors is a fast-paced 2D action game with
+                                    roguelite elements.
+                                    The player tries to survive against incoming enemies while leveling up, buying new
+                                    abilities, and getting stronger.</p>
+                                <br>
+                                <h3 data-i18n="proj2-did-title">What I Did?</h3>
+                                <ul>
+                                    <li data-i18n="proj2-li1"><strong>Enemy System:</strong> Enemies designed, designed for
+                                        multiple attack types.
+                                    </li>
+                                    <li data-i18n="proj2-li2"><strong>Shop System:</strong> Multiple shops designed where
+                                        the player can buy
+                                        things at the end of the round.</li>
+                                    <li data-i18n="proj2-li3"><strong>Wave System:</strong> Timed wave/round system
+                                        designed. Ensured enemies
+                                        spawn correctly and waves are designed as desired.</li>
+                                    <li data-i18n="proj2-li4"><strong>EXP, Token and Coin System:</strong> EXP, Token, and
+                                        Coin system obtainable
+                                        from enemies designed.</li>
+                                    <li data-i18n="proj2-li5"><strong>UI Mechanics:</strong> UI mechanics and design
+                                        implemented.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 3: Survival Project -->
+                    <article class="project-card">
+                        <div class="project-image">
+                            <div class="placeholder-img"><img src="images/survival-game.png"></div>
+                        </div>
+                        <div class="project-content">
+                            <h3>Survival Project</h3>
+                            <p class="project-desc" data-i18n="proj1-desc">A 3D survival game project.</p>
+                            <div class="tags">
+                                <span>Unity</span>
+                                <span>C#</span>
+                                <span>3D</span>
+                                <span data-i18n="tag-surv">Survival</span>
+                                <span class="status-badge unfinished" data-i18n="tag-unfin">Unfinished</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/Eferene/survival-game" target="_blank" data-i18n="link-code"><i
+                                        class="fab fa-github"></i> Code</a>
+                            </div>
+                            <span class="click-hint" data-i18n="click-hint"><i class="fas fa-info-circle"></i> Click for
+                                details</span>
+                            <div class="project-details" style="display: none;">
+                                <h3 data-i18n="proj1-about-title">About Project</h3>
+                                <p data-i18n="proj1-about">Survival Project is a 3D survival project developed in Unity game
+                                    engine.
+                                    The project was shelved due to some reasons.
+                                </p>
+                                <br>
+                                <h3 data-i18n="proj1-did-title">What I Did?</h3>
+                                <ul>
+                                    <li data-i18n="proj1-li1"><strong>Inventory System:</strong> Slot-based inventory system
+                                        designed.</li>
+                                    <li data-i18n="proj1-li2"><strong>Item System:</strong> Item system, the foundation of a
+                                        survival game,
+                                        designed.</li>
+                                    <li data-i18n="proj1-li3"><strong>Crafting System:</strong> System to produce new items
+                                        from collected items
+                                        designed.</li>
+                                    <li data-i18n="proj1-li4"><strong>Building System (Unfinished):</strong> Basic building
+                                        mechanics added.</li>
+                                    <li data-i18n="proj1-li5"><strong>Survival Mechanics:</strong> Hunger, thirst, and
+                                        fatigue mechanics added.
+                                        Includes consuming items.</li>
+                                    <li data-i18n="proj1-li6"><strong>3D Models:</strong> 3D models designed for the game.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                
+                <div class="carousel-dots">
+                    <!-- Dots will be populated by JS -->
+                </div>
             </div>
         </div>
     </section>

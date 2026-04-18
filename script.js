@@ -1,21 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Custom Cursor
-    const cursorDot = document.querySelector('[data-cursor-dot]');
-    const cursorOutline = document.querySelector('[data-cursor-outline]');
-
-    window.addEventListener('mousemove', function (e) {
-        const posX = e.clientX;
-        const posY = e.clientY;
-
-        cursorDot.style.left = `${posX}px`;
-        cursorDot.style.top = `${posY}px`;
-
-        // Add a slight delay for the outline for a smooth effect
-        cursorOutline.animate({
-            left: `${posX}px`,
-            top: `${posY}px`
-        }, { duration: 500, fill: 'forwards' });
-    });
 
     // Language Switcher
     const langBtns = document.querySelectorAll('.lang-btn');
@@ -144,19 +127,87 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Custom Cursor Interactions
-    // Add hover effect to cursor when hovering interactive elements
-    const interactiveElements = document.querySelectorAll('a, button, .project-card, .social-icon, .close-modal');
+    // Flat Carousel Logic
+    const carouselCards = document.querySelectorAll('.project-card');
+    const dotsContainer = document.querySelector('.carousel-dots');
+    const leftArrow = document.querySelector('.left-arrow');
+    const rightArrow = document.querySelector('.right-arrow');
+    const carouselWrapper = document.querySelector('.carousel-wrapper');
+    
+    let currentCarouselIndex = 0; // Treeban starts as active
 
-    interactiveElements.forEach(el => {
-        el.addEventListener('mouseenter', () => {
-            cursorOutline.style.transform = 'translate(-50%, -50%) scale(1.5)';
-            cursorOutline.style.backgroundColor = 'rgba(0, 255, 157, 0.1)';
+    // Initialize Dots
+    if (dotsContainer && carouselCards.length > 0) {
+        carouselCards.forEach((_, index) => {
+            const dot = document.createElement('span');
+            dot.classList.add('dot');
+            if (index === currentCarouselIndex) dot.classList.add('active');
+            dot.addEventListener('click', () => {
+                currentCarouselIndex = index;
+                updateCarousel();
+            });
+            dotsContainer.appendChild(dot);
+        });
+    }
+
+    const dots = document.querySelectorAll('.dot');
+
+    function updateCarousel() {
+        if (carouselCards.length === 0) return;
+        
+        carouselCards.forEach((card, index) => {
+            card.classList.remove('active', 'prev', 'next', 'hidden');
+            
+            if (index === currentCarouselIndex) {
+                card.classList.add('active');
+            } else if (index === (currentCarouselIndex - 1 + carouselCards.length) % carouselCards.length) {
+                card.classList.add('prev');
+            } else if (index === (currentCarouselIndex + 1) % carouselCards.length) {
+                card.classList.add('next');
+            } else {
+                card.classList.add('hidden');
+            }
         });
 
-        el.addEventListener('mouseleave', () => {
-            cursorOutline.style.transform = 'translate(-50%, -50%) scale(1)';
-            cursorOutline.style.backgroundColor = 'transparent';
+        dots.forEach((dot, index) => {
+            if (index === currentCarouselIndex) {
+                dot.classList.add('active');
+            } else {
+                dot.classList.remove('active');
+            }
         });
-    });
+    }
+
+    function nextSlide() {
+        currentCarouselIndex = (currentCarouselIndex + 1) % carouselCards.length;
+        updateCarousel();
+    }
+
+    function prevSlide() {
+        currentCarouselIndex = (currentCarouselIndex - 1 + carouselCards.length) % carouselCards.length;
+        updateCarousel();
+    }
+
+    if (carouselCards.length > 0) {
+        updateCarousel();
+
+        if (leftArrow) leftArrow.addEventListener('click', prevSlide);
+        if (rightArrow) rightArrow.addEventListener('click', nextSlide);
+
+        // Allow clicking prev/next cards to navigate instead of opening modal
+        carouselCards.forEach((card, index) => {
+            card.addEventListener('click', (e) => {
+                if (card.classList.contains('prev')) {
+                    e.preventDefault();
+                    e.stopImmediatePropagation();
+                    prevSlide();
+                } else if (card.classList.contains('next')) {
+                    e.preventDefault();
+                    e.stopImmediatePropagation();
+                    nextSlide();
+                }
+            }, true); // use capture phase
+        });
+    }
+
 });
