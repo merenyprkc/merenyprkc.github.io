@@ -20,7 +20,6 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 html {
     scroll-behavior: smooth;
-    scroll-snap-type: y proximity;
 }
 
 body {
@@ -186,7 +185,6 @@ body {
     padding: 100px 8% 6rem;
     position: relative;
     z-index: 1;
-    scroll-snap-align: start;
 }
 
 .hero-content {
@@ -304,28 +302,6 @@ body {
     transform: translateY(-2px);
 }
 
-/* Scroll indicator */
-.scroll-hint {
-    position: absolute;
-    bottom: 2.5rem;
-    left: 50%;
-    transform: translateX(-50%);
-    opacity: 0.35;
-}
-
-.scroll-line {
-    width: 1px;
-    height: 52px;
-    background: linear-gradient(to bottom, transparent, var(--primary-light), transparent);
-    animation: scroll-pulse 2.5s ease-in-out infinite;
-    margin: 0 auto;
-}
-
-@keyframes scroll-pulse {
-    0%, 100% { opacity: 0.3; transform: scaleY(0.6); }
-    50% { opacity: 1; transform: scaleY(1); }
-}
-
 /* ====== SECTIONS ====== */
 .section {
     min-height: 100vh;
@@ -335,7 +311,6 @@ body {
     position: relative;
     z-index: 1;
     counter-increment: section-counter;
-    scroll-snap-align: start;
 }
 
 .section .container { width: 100%; }
@@ -890,5 +865,4 @@ dialog::backdrop {
 
 @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
-    .scroll-line { animation: none; }
 }
